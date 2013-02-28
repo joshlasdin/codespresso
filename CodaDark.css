@@ -1,0 +1,63 @@
+/*
+	@theme Coda Dark
+	@override-placeholders html, xml, sourcecode.js, php, css, less
+*/
+
+:document-base {
+	color: #FFFFFF;
+	background-color: rgba(0,0,0,.9);
+	insertion-point-color: #FFF;
+	selection-background-color: #2256a8;
+	current-line-background-color: rgba(255,255,255,0.1);
+}
+
+tag, source, sourcecode { spell-check: disabled; }
+
+/* @group HTML */
+tag.doctype { color: #A2E3A5 !important; }
+tag, attribute { color: #F189E9; }
+attribute-name { color: #FCB97D; }
+attribute-value { color: #756BE8; }
+regex { color: #B568E8; }
+comment, comment>* { color: #666; }
+invalid { background: #FB2D35; }
+html.entity { color: #F189E9; }
+/* @end */
+
+
+/* @group PHP */
+php delimiter>keyword,
+php delimiter>punctuation { color: #FB2D35; }
+php operator, php delimiter { color: white }
+php variable { color: #FCDE93; }
+php string { color: #FB992B; }
+php function { color: #EF8AC1; }
+php keyword, php boolean { color: #EF8AB4; }
+php variable.function,
+php function>name { color: #ABD3FE; }
+php constant.numeric { color: #37A2FD; }
+/* @end */
+
+/* @group CSS */
+css selector, less selector { color: white; }
+css property-name, less property-name { color: #EF8AC0; }
+css property-value, css function, less property-value, less mixin.arguments { color: #FCB77B; }
+css color, css color>*, less color, less color>* { color: #47B963; }
+css constant.numeric, css constant.numeric + *:not(color), less zconstant.nzumeric, less zkeyword.other.zunit { color: #37A2FD; }
+css punctuation, less punctuation { color: white; }
+css, css string, less string { color: #F19BA1; }
+/* @end */
+
+/* @group LESS */
+less variable, less variable.punctuation, less variable.property-name { color: #44b83c; }
+
+/* @end */
+
+/* @group JS */
+js variable { color: white; }
+js keyword, js boolean { color: #EF8AC1; }
+js constant.numeric { color: #37A2FD; }
+js string { color: #F19BA1; }
+js variable.function,
+js function>name { color: #ABD3FE; }
+/* @end */
